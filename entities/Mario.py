@@ -154,7 +154,7 @@ class Mario(EntityBase):
         srf.set_colorkey((255, 255, 255), pygame.RLEACCEL)
         srf.set_alpha(128)
         self.sound.music_channel.stop()
-        self.sound.music_channel.play(self.sound.death)
+        self.sound.play_sfx(self.sound.death)
 
         for i in range(500, 20, -2):
             srf.fill((0, 0, 0))
