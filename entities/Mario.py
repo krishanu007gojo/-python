@@ -121,8 +121,8 @@ class Mario(EntityBase):
                 mob.rect.x += -5
                 self.sound.play_sfx(self.sound.kick)
             else:
-                mob.rect.x += 5
                 mob.leftrightTrait.direction = 1
+                mob.rect.x += 5
                 self.sound.play_sfx(self.sound.kick)
         elif collisionState.isColliding and mob.alive and not self.invincibilityFrames:
             if self.powerUpState == 0:
@@ -131,6 +131,7 @@ class Mario(EntityBase):
                 self.powerUpState = 0
                 self.traits['goTrait'].updateAnimation(smallAnimation)
                 x, y = self.rect.x, self.rect.y
+
                 self.rect = pygame.Rect(x, y + 32, 32, 32)
                 self.invincibilityFrames = 60
                 self.sound.play_sfx(self.sound.pipe)

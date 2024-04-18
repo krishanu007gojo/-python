@@ -51,7 +51,7 @@ class Koopa(EntityBase):
             )
 
     def shellBouncing(self, camera):
-        self.leftrightTrait.speed = 4
+        self.leftrightTrait.speed = 6
         self.applyGravity()
         self.animation.image = self.spriteCollection.get("koopa-hiding").image
         self.drawKoopa(camera)
