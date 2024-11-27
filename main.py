@@ -5,6 +5,7 @@ from classes.Menu import Menu
 from classes.Sound import Sound
 from entities.Mario import Mario
 
+# added comment
 
 windowSize = 640, 480
 
